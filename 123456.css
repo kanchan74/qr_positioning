@@ -3,32 +3,21 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   text-align: center;
   margin-top: 50px;
+  font-family: Arial;
 }
 
-/* Button style */
 button {
   background-color: var(--primary-color);
   color: white;
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
-/* Hover effect */
 button:hover {
   background-color: #388e3c;
-  transform: scale(1.05);
   cursor: pointer;
-}
-
-/* Image preview */
-img {
-  margin-top: 20px;
-  max-width: 250px;
-  border-radius: 10px;
 }
