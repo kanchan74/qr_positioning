@@ -7,7 +7,7 @@ scanBtn.addEventListener("click", () => {
   fileInput.click();
 });
 
-// Show preview after selecting image
+// Show selected image
 fileInput.addEventListener("change", (event) => {
   const file = event.target.files[0];
 
