@@ -1,6 +1,6 @@
 /* CSS Variables */
 :root {
-    --theme: #28a745; /* Green theme color */
+    --theme: #28a745;
 }
 
 /* Global styles */
@@ -12,16 +12,25 @@ body {
     font-family: Arial, sans-serif;
 }
 
-h1 {
-    color: var(--theme);
-    margin-top: 20px;
+/* Center the map container */
+#mapContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px 0;
 }
 
-/* Map & marker */
+/* Map image */
 #map {
     width: 100%;
+    height: auto;
+    display: block;
 }
 
+/* Marker on top of map */
 #marker {
     width: 3vw;
     height: 3vw;
@@ -30,24 +39,23 @@ h1 {
     outline: 5px solid var(--theme);
     border: 5px solid white;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;    /* center vertically */
+    left: 50%;   /* center horizontally */
     transform: translate(-50%, -50%);
 }
 
-#mapContainer {
-    position: relative;
-    display: none;
-}
-
+/* Camera view for QR scanner */
 #camera {
-    width: 100%;
+    width: 90%;
+    max-width: 600px;
+    height: 400px; /* fixed height for scanner */
     margin: 10px 0;
+    display: none; /* hidden until scan starts */
 }
 
 /* Button styling */
 #btn {
-    background-color: var(--theme); /* Use CSS variable */
+    background-color: var(--theme);
     color: white;
     border: none;
     padding: 12px 24px;
@@ -56,9 +64,9 @@ h1 {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
 }
 
-/* Hover effect */
 #btn:hover {
     background-color: white;
     color: var(--theme);
