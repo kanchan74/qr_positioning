@@ -1,11 +1,15 @@
-document.getElementById("scanBtn").addEventListener("click", function () {
-  document.getElementById("fileInput").click();
+const scanBtn = document.getElementById("scanBtn");
+const fileInput = document.getElementById("fileInput");
+const preview = document.getElementById("preview");
+
+scanBtn.addEventListener("click", () => {
+  fileInput.click();
 });
 
-document.getElementById("fileInput").addEventListener("change", function (event) {
+fileInput.addEventListener("change", (event) => {
   const file = event.target.files[0];
 
   if (file) {
-    document.getElementById("preview").src = URL.createObjectURL(file);
+    preview.src = URL.createObjectURL(file);
   }
 });
