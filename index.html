@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Inventory System</title>
-    <link rel="stylesheet" href="123456.css" />
+  <meta charset="UTF-8">
+  <title>Scan App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>QR Inventory System</h1>
 
-    <!-- Map container still here if needed -->
-    <div id="mapContainer">
-        <img src="map.png" id="map" alt="map" />
-        <div id="marker"></div>
-    </div>
+  <h1>Scan Image</h1>
 
-    <!-- Scan / Cancel button -->
-    <button id="btn" onclick="toggleScanner()">SCAN</button>
+  <button id="scanBtn">Scan</button>
 
-    <!-- Camera view for QR scanner -->
-    <div id="camera"></div>
+  <!-- Hidden input for camera/file -->
+  <input 
+    type="file" 
+    id="fileInput" 
+    accept="image/*" 
+    capture="environment" 
+    hidden
+  >
 
-    <!-- Inventory info display -->
-    <div id="inventoryInfo">
-        <p id="itemName"></p>
-        <p id="inStore"></p>
-        <p id="price"></p>
-    </div>
+  <!-- Image preview -->
+  <img id="preview" alt="Preview will appear here">
 
-    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
-    <script src="123456.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
