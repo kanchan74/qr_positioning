@@ -1,17 +1,11 @@
-const scanBtn = document.getElementById("scanBtn");
-const fileInput = document.getElementById("fileInput");
-const preview = document.getElementById("preview");
-
-// Open camera / file picker
-scanBtn.addEventListener("click", () => {
-  fileInput.click();
+document.getElementById("scanBtn").addEventListener("click", function () {
+  document.getElementById("fileInput").click();
 });
 
-// Show selected image
-fileInput.addEventListener("change", (event) => {
+document.getElementById("fileInput").addEventListener("change", function (event) {
   const file = event.target.files[0];
 
   if (file) {
-    preview.src = URL.createObjectURL(file);
+    document.getElementById("preview").src = URL.createObjectURL(file);
   }
 });
