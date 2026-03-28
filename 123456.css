@@ -1,31 +1,78 @@
+/* CSS Variables */
 :root {
-  --primary-color: #4CAF50;
+    --theme: #28a745; /* Green theme color */
 }
 
+/* Global styles */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-button {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: all 0.3s ease;
+h1 {
+    color: var(--theme);
+    margin-top: 20px;
 }
 
-button:hover {
-  background-color: #388e3c;
-  transform: scale(1.05);
-  cursor: pointer;
+/* Map & marker */
+#map {
+    width: 100%;
 }
 
-img {
-  margin-top: 20px;
-  max-width: 250px;
-  border-radius: 10px;
+#marker {
+    width: 3vw;
+    height: 3vw;
+    background-color: black;
+    border-radius: 50%;
+    outline: 5px solid var(--theme);
+    border: 5px solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+#mapContainer {
+    position: relative;
+    display: none;
+}
+
+#camera {
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Button styling */
+#btn {
+    background-color: var(--theme); /* Use CSS variable */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Hover effect */
+#btn:hover {
+    background-color: white;
+    color: var(--theme);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+    transform: scale(1.05);
+}
+
+/* Inventory display */
+#inventoryInfo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#inventoryInfo p {
+    font-size: 18px;
+    margin: 5px 0;
 }
