@@ -1,9 +1,7 @@
-/* CSS Variables */
 :root {
-    --theme:red; /* Your theme color */
+    --theme: purple; /* Theme color */
 }
 
-/* Global styles */
 body {
     display: flex;
     flex-direction: column;
@@ -16,11 +14,12 @@ h1 {
     color: var(--theme);
 }
 
-/* Map & marker */
+/* Map image */
 #map {
     width: 100%;
 }
 
+/* Marker styling */
 #marker {
     width: 3vw;
     height: 3vw;
@@ -34,19 +33,24 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
+/* Map container */
 #mapContainer {
     position: relative;
     display: none;
 }
 
+/* Camera container */
 #camera {
     width: 100%;
     margin: 10px 0;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-/* Button styling */
+/* Button */
 #btn {
-    background-color: var(--theme); /* Use CSS variable */
+    background-color: var(--theme);
     color: white;
     border: none;
     padding: 12px 24px;
@@ -57,7 +61,6 @@ h1 {
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-/* Hover effect */
 #btn:hover {
     background-color: white;
     color: var(--theme);
