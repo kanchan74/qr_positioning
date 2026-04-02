@@ -1,47 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Character encoding -->
     <meta charset="UTF-8">
-
-    <!-- Makes the page responsive on mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page title (browser tab name) -->
     <title>QR Positioning</title>
-
-    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="123456.css" />
 </head>
 <body>
-    <!-- Main heading -->
     <h1>QR Positioning</h1>
 
-   <div id="inventoryInfo">
-    <p id="itemName"></p>
-    <p id="latitude"></p>
-    <p id="longitude"></p>
-</div>
-
-    <!-- Container for map and marker -->
+    <!-- Map container -->
     <div id="mapContainer">
-        <!-- Map image -->
         <img src="map.png" id="map" alt="map" />
-
-        <!-- Marker shown on the map -->
         <div id="marker"></div>
     </div>
 
-    <!-- Button to start/stop QR scanner -->
+    <!-- Scan button -->
     <button id="btn" onclick="toggleScanner()">SCAN</button>
 
-    <!-- Camera view for QR scanning -->
+    <!-- Camera container -->
     <div id="camera"></div>
 
-    <!-- External QR scanner library -->
-    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <!-- Inventory info -->
+    <div id="inventoryInfo">
+        <p id="itemName"></p>
+        <p id="latitude"></p>
+        <p id="longitude"></p>
+    </div>
 
-    <!-- Your JavaScript file -->
+    <!-- QR scanner library -->
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <!-- Your JS -->
     <script src="123456.js"></script>
 </body>
 </html>
